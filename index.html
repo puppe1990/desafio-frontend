@@ -4,10 +4,14 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <form action="searching(event)">
-            <input class="input" type="text" o>
+        <form onsubmit="userController.searching(event)">
+            <input class="input" id="username" type="text" required>
             <button class="button" type="submit">Pesquisar</button>        
         </form>
-        <script src="js/scripts.js"></script>
+        <script src="js/User.js"></script>
+        <script src="js/UserController.js"></script>
+        <script type="text/javascript">
+            let userController = new UserController();
+        </script>
     </body>
 </html>
