@@ -1,6 +1,9 @@
+form {
+    padding-left: 30%;
+}
 .input{
 	display:block;
-	width:25%;
+	width:50%;
 	padding:.375rem .75rem;
 	font-size:1rem;
 	line-height:1.5;
@@ -16,5 +19,28 @@
 	color:#fff;
 	background-color:#007bff;
 	border-color:#007bff;
-	width:25%;
+	width:50%;
+}
+#result{
+    /* display: none; */
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#result td, #result th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#result tr:nth-child(even){background-color: #f2f2f2;}
+
+#result tr:hover {background-color: #ddd;}
+
+#result th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
 }

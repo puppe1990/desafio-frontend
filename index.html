@@ -5,9 +5,18 @@
     </head>
     <body>
         <form onsubmit="userController.searching(event)">
-            <input class="input" id="username" type="text" required>
-            <button class="button" type="submit">Pesquisar</button>        
+            <input class="input" id="username" type="text" onclick="this.value = ''" value="puppe1990" required>
+            <button class="button" type="submit">Pesquisar Usuário GitHub</button>        
         </form>
+        <table id="result" class="result">
+            <tr>
+                <th>Imagem Avatar</th>
+                <th>Bio</th>
+                <th>E-mail</th>
+                <th>Número de seguidores</th>
+                <th>Número de seguidos</th>
+            </tr>
+        </table>
         <script src="js/User.js"></script>
         <script src="js/UserController.js"></script>
         <script type="text/javascript">
