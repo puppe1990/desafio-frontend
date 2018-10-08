@@ -21,23 +21,23 @@ form {
 	border-color:#007bff;
 	width:50%;
 }
-#result{
+table{
     /* display: none; */
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#result td, #result th {
+table td, table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#result tr:nth-child(even){background-color: #f2f2f2;}
+table tr:nth-child(even){background-color: #f2f2f2;}
 
-#result tr:hover {background-color: #ddd;}
+table tr:hover {background-color: #ddd;}
 
-#result th {
+table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
