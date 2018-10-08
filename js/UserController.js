@@ -7,15 +7,17 @@ class UserController {
     //Receive the data of input
 	searching(event) {
         event.preventDefault();
-        // let td = document.querySelector('#result > td');
-        // console.log(td);
-        // if(td !== null)
-        //     td.remove();
+        this.clear();
 
-        let data = document.querySelector("#data");
-        if(data.style.display == 'none')
+        let data = document.querySelector(".data");
+        if(data.style.display == 'none' || data.style.display == '')
             data.style.display = 'block';
 
+        let detail = document.querySelector("#repodetail");
+        if(detail.style.display == 'block')
+            detail.style.display = 'none';
+
+            
 		let user = new User(
 			this._inputUserName.value
 		);
@@ -44,6 +46,7 @@ class UserController {
                 const res = JSON.parse(xhr.response);
                 // console.log(res);
                 let div = document.getElementById("result");
+
                 createTd('td', res.avatar_url, div);
                 createTd('td', res.bio, div);
                 createTd('td', res.email, div);
@@ -97,7 +100,7 @@ class UserController {
             if(atribute !== null){
                 element.setAttribute('onclick', 'userController.repoDetail(this.value)');
                 element.setAttribute('value', data);
-                element.setAttribute('class','button');
+                element.setAttribute('class','button detail');
                 value = document.createTextNode('Clique aqui para ver os detalhes do repositório');
             }
             element.appendChild(value);
@@ -136,8 +139,8 @@ class UserController {
             //and transforms response into a valid JSON
             if (xhr.status === 200) {
                 const res = JSON.parse(xhr.response);
-                console.log(res);
-                let div = document.getElementById("repodetail");
+                let div = document.getElementById("row");
+
                 createTd('td', res.name, div);
                 createTd('td', res.description, div);
                 createTd('td', res.stargazers_count, div);
@@ -154,6 +157,12 @@ class UserController {
             element.appendChild(value);
             div.appendChild(element);
         }
+    }
+
+    clear(){
+        console.log('clear');
+        let div = document.getElementById("rowResult");
+        console.log(div);
     }
     
 

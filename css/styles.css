@@ -1,7 +1,9 @@
 /* body{
     background-color: #1EA1E8;
 } */
-
+.data{
+    display: none;
+}
 form {
     padding-left: 30%;
 }
@@ -28,6 +30,9 @@ form {
     height: 10%;
     border-radius:.25rem;
     font-size: 100%;
+}
+.button.detail{
+    margin-left: 27%;
 }
 table{
     /* display: none; */
