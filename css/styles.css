@@ -1,3 +1,7 @@
+/* body{
+    background-color: #1EA1E8;
+} */
+
 form {
     padding-left: 30%;
 }
@@ -13,13 +17,17 @@ form {
 	padding-box;
 	border:1px solid #ced4da;
 	border-radius:.25rem;
-	transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
 }
 .button{
 	color:#fff;
-	background-color:#007bff;
-	border-color:#007bff;
-	width:50%;
+	background-color:#1EA1E8;
+	border-color:#1EA1E8;
+    width:50%;
+    height: 10%;
+    border-radius:.25rem;
+    font-size: 100%;
 }
 table{
     /* display: none; */
@@ -41,6 +49,16 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #007bff;
+    background-color: #1EA1E8;
     color: white;
+    text-align: center;
+}
+
+table td {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.repodetail{
+    display: none;
 }
