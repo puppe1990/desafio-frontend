@@ -47,7 +47,7 @@ class UserController {
                 // console.log(res);
                 let div = document.getElementById("result");
 
-                createTd('td', res.avatar_url, div);
+                createTd('img', res.avatar_url, div);
                 createTd('td', res.bio, div);
                 createTd('td', res.email, div);
                 createTd('td', res.followers, div);
@@ -59,6 +59,10 @@ class UserController {
         }
         function createTd(tag, data, div){
             let element = document.createElement(tag);
+            if(tag == 'img'){
+                element.setAttribute('src', data);
+                element.setAttribute('class', 'photo');
+            }
             let value = document.createTextNode(data);
             element.appendChild(value);
             div.appendChild(element);
@@ -117,7 +121,6 @@ class UserController {
                 return ((x > y) ? -1 : ((x < y) ? 1 : 0));
             });
         }
-
 
     }
 
